@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h1>This is the modal page</h1>
+
     <button @click="toggleModal">Open</button>
 
     <transition name="fade">
