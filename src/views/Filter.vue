@@ -19,7 +19,7 @@
     </div>
 
     <transition-group name="card" tag="div" appear>
-      <div class="card" v-for="course in filteredCourses" :key="course.title">
+      <div class="card" v-for="course in filteredCourses" :key="course.id">
         {{ course.title }}
       </div>
     </transition-group>
