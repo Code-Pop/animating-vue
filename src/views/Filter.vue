@@ -112,12 +112,6 @@ export default {
 }
 
 .card {
-  /* display: inline-block;
-  height: 80px;
-  margin: 15px;
-  border: 0.5px solid #2c3e50;
-  border-radius: 3%;
-  box-shadow: 0.1px 1px; */
   width: 10rem;
   height: 5rem;
   position: relative;
