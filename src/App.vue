@@ -2,7 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Modal</router-link> |
-      <router-link to="/list">List</router-link>
+      <router-link to="/list">List</router-link> |
+      <router-link to="/filter">Filter</router-link>
     </div>
     <transition name="slide-fade" mode="out-in">
       <router-view />
@@ -11,6 +12,8 @@
 </template>
 
 <style>
+@import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css';
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -104,4 +107,29 @@ ul {
 /* .slide-fade-move {
   ??
 } */
+
+/****** CARD ******/
+.card-enter {
+  transform: scale(0.6);
+  opacity: 0;
+}
+
+.card-enter-active {
+  transition: all 1s ease-in;
+}
+
+.card-leave-active {
+  transition: all 0.4s ease-in;
+  position: absolute;
+  z-index: 0;
+}
+
+/* .card-move {
+  ??
+} */
+
+.card-leave-to {
+  transform: scale(0.5);
+  opacity: 0;
+}
 </style>
