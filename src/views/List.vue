@@ -1,5 +1,5 @@
 <template>
-  <div class="card-container">
+  <div>
     <input type="text" v-model="newContact" placeholder="Name" />
     <button @click="addContact">Add Contact</button>
     <button @click="sortAlphabetical">Sort</button>

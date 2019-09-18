@@ -116,8 +116,7 @@ export default {
   height: 5rem;
   position: relative;
   display: inline-flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   margin-left: 1em;
   margin-top: 1em;
   padding-top: 0.75em;
