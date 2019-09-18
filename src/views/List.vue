@@ -5,7 +5,7 @@
     <button @click="sortAlphabetical">Sort</button>
 
     <transition-group name="slide-fade" appear tag="ul">
-      <li v-for="(contact, index) in contacts" :key="index">
+      <li v-for="contact in contacts" :key="contact">
         {{ contact }}
       </li>
     </transition-group>
@@ -22,12 +22,20 @@ export default {
   },
   methods: {
     addContact() {
-      this.contacts.push(this.newContact)
+      const capitalized = this.newContact.replace(/(?:^|\s)\S/g, (a) => { return a.toUpperCase() })
+      this.contacts.push(capitalized)
       this.newContact = ''
     },
     sortAlphabetical() {
-      this.contacts.sort()
+      this.contacts = this.contacts.sort()
     }
   }
 }
 </script>
+
+
+<style scoped>
+.slide-fade-move {
+  transition: transform 500ms ease-out;
+}
+</style>
