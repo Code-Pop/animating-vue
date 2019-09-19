@@ -27,7 +27,7 @@ export default {
       this.newContact = ''
     },
     sortAlphabetical() {
-      this.contacts = this.contacts.sort()
+      this.contacts.sort()
     }
   }
 }

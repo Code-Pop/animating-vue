@@ -1,6 +1,6 @@
 <template>
   <div class="card-container">
-    <div>
+    <div class="card-level-filter">
       <span
         :class="{ active: activeFilter === 'Beginner' }"
         @click="updateFilter('Beginner')"
@@ -18,11 +18,13 @@
       >
     </div>
 
+    <div class="card-level-list">
     <transition-group name="card" tag="div" appear>
-      <div class="card" v-for="course in filteredCourses" :key="course.id">
+      <div class="card" v-for="(course, index) in filteredCourses" :key="course.id" :style="{'--i': index}">
         {{ course.title }}
       </div>
     </transition-group>
+    </div>
   </div>
 </template>
 
@@ -104,31 +106,51 @@ export default {
   text-decoration: underline;
 }
 
-.card-container {
+.card-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+
 .card {
   width: 10rem;
   height: 5rem;
-  position: relative;
   display: inline-flex;
+  margin: 1rem;
+  vertical-align: middle;
   justify-content: center;
-  margin-left: 1em;
-  margin-top: 1em;
-  padding-top: 0.75em;
+  align-items: center;
   border-radius: 6px;
-  background-color: white;
   box-shadow: 0 0 0 1px #2c3e50;
   backface-visibility: hidden;
-  transform-origin: 10% 50%;
+  transform-origin: 50%;
 }
 
-span {
+.card-level-filter span {
   margin-right: 1rem;
   cursor: pointer;
+}
+
+
+
+.card-move {
+  transition: opacity .3s linear, transform .3s ease-in-out;
+}
+
+ .card-leave-to {
+  transition: opacity .3s linear, transform .3s cubic-bezier(.5,0,.7,.4);
+}
+
+ .card-enter-active { 
+  transition: opacity .3s linear .3s, transform .3s cubic-bezier(.2,.5,.1,1) .3s;
+  transition-delay: calc(.3s + .1s * var(--i) );
+}
+
+ .card-enter, 
+ .card-leave-to {
+  opacity: 0;
+  transform: scale(.6);
 }
 </style>

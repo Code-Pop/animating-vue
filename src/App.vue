@@ -108,28 +108,4 @@ ul {
   ??
 } */
 
-/****** CARD ******/
-.card-enter {
-  transform: scale(0.6);
-  opacity: 0;
-}
-
-.card-enter-active {
-  transition: all 1s ease-in;
-}
-
-.card-leave-active {
-  transition: all 0.4s ease-in;
-  position: absolute;
-  z-index: 0;
-}
-
-/* .card-move {
-  ??
-} */
-
-.card-leave-to {
-  transform: scale(0.5);
-  opacity: 0;
-}
 </style>
