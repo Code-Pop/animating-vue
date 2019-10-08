@@ -2,15 +2,21 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Modal</router-link> |
-      <router-link to="/list">List</router-link>
+      <router-link to="/list">List</router-link> |
+      <router-link to="/drawer">Drawer</router-link>
     </div>
-    <transition name="slide-fade" mode="out-in">
-      <router-view />
-    </transition>
+    <!-- <transition name="slide-fade" mode="out-in"> -->
+    <router-view />
+    <!-- </transition> -->
   </div>
 </template>
 
 <style>
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -72,7 +78,6 @@ ul {
   list-style-type: none;
 }
 
-/*** TRANSITIONS ***/
 /*** TRANSITIONS ***/
 .fade-enter {
   opacity: 0;
