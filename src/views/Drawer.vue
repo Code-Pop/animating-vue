@@ -30,10 +30,6 @@ img {
   border-radius: 50%;
 }
 
-input {
-  width: 90%;
-}
-
 .drawer {
   display: flex;
   flex-direction: column;
@@ -45,7 +41,6 @@ input {
   box-shadow: 0.08em 0.03em 0.4em #ababab;
   padding-top: 0.7em;
 }
-
 .drawer div {
   height: 3.5em;
   width: 95%;
