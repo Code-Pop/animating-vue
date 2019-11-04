@@ -1,16 +1,23 @@
 <template>
   <div>
-    <div :style="{ width: number + 'px' }" class="bar">
-      <span>{{ number }}</span>
+    <div :style="{ width: tweenedNumber + 'px' }" class="bar">
+      <span>{{ tweenedNumber.toFixed(0) }}</span>
     </div>
   </div>
 </template>
 
 <script>
+import { TweenMax } from 'gsap/TweenMax'
 export default {
   data() {
     return {
-      number: 0
+      number: 0,
+      tweenedNumber: 0
+    }
+  },
+  watch: {
+    number(newValue) {
+      TweenMax.to(this.$data, 1, { tweenedNumber: newValue })
     }
   },
   methods: {
