@@ -5,19 +5,13 @@
 </template>
 
 <script>
-import { TweenMax } from 'gsap/TweenMax'
 export default {
   methods: {
     beforeEnter(el) {
-      el.style.opacity = 0
-      el.style.transform = 'scale(0,0)'
+      // starting styles
     },
     enter(el, done) {
-      TweenMax.to(el, 1, {
-        opacity: 1,
-        scale: 1,
-        onComplete: done
-      })
+      // style to transition to once entered
     }
   }
 }
