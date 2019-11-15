@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { TweenMax } from 'gsap/TweenMax'
+import gsap from 'gsap'
 export default {
   data() {
     return {

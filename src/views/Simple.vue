@@ -8,7 +8,7 @@
 export default {
   methods: {
     beforeEnter(el) {
-      // starting styles
+      // starting style
     },
     enter(el, done) {
       // style to transition to once entered
