@@ -53,6 +53,12 @@ export default new Router({
       name: 'timeline',
       component: () =>
         import(/* webpackChunkName: "timeline" */ './views/Timeline.vue')
+    },
+    {
+      path: '/master',
+      name: 'master',
+      component: () =>
+        import(/* webpackChunkName: "master" */ './views/Master.vue')
     }
   ]
 })

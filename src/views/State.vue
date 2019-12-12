@@ -1,7 +1,7 @@
 <template>
   <div>
     <div :style="{ width: tweenedNumber + 'px' }" class="bar">
-      <span>{{ tweenedNumber }}</span>
+      <span>{{ tweenedNumber.toFixed(0) }}</span>
     </div>
   </div>
 </template>
